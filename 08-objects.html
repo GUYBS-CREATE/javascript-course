@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+      <style>
+      
+      </style>
+  </head>
+  <body>
+
+    <script>
+      /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotten socks';
+      console.log(product); 
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+      console.log(typeof product); */
+
+      /*
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating : {
+          start: 4.5,
+          count: 87
+        },
+        fun: function function1 (){
+          console.log('function inside object')
+        }
+
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      
+      console.log(product2.rating.count)
+      product2.fun(); 
+
+      console.log (typeof console.log)
+      
+      console.log(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+      */
+
+      /*
+      const product2 = {
+        name: 'shirt',
+        ['delivery-time']: '9:00',
+        rating: {
+          n1 : 1,
+          n2 : 2,
+          
+        },
+        fun: function function1(n)
+        {
+          console.log('function inside object +' + n);
+        }
+      };
+      console.log(product2['delivery-time']);
+      console.log(product2['rating']);
+
+      console.log(product2.rating.n1);
+      product2.fun(product2.rating.n1);
+
+      console.log (typeof console.log);
+
+      console.log(JSON.stringify(product2));
+
+      JSON.parse(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+      */
+
+      /*
+      console.log('hello'.length);  
+      console.log('hello'.toUpperCase());
+
+      const object1 = {
+        message: 'hello'
+      };
+
+      const object2 = object1;
+
+      object1.message= 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good job!'
+      };
+      console.log(object3=== object1);
+      console.log(object2 === object1);
+
+      const object4 = {
+        message: 'Good job!',
+        price: 799
+      };
+      // const message = object4.message;
+      const {message, price} = object4;
+      console.log(message);
+      console.log(price);
+      
+      const object5 = {
+        //message: message
+        message,
+        //method: function function1() {
+        //  console.log('method');
+        //}
+        method(){
+          console.log('method');
+        }
+      };
+      const object6 = {
+        me1thod3(){
+          console.log('Hi');
+        }
+      }
+      console.log(object5);
+      object5.method();
+      object6.me1thod3();*/
+
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095,
+        'delivery-time': '3 days'
+      }
+      const product2 = {
+        name: 'basketball',
+        price: 1800,
+        'delivery-time': '4 days'
+      }
+      console.log(product1);
+      product1.price = 2595;
+      console.log(product1);
+      console.log(product1['delivery-time']);
+
+      function comparePrice(product1, product2){
+        if (product1.price > product2.price){
+          return product2;
+        }
+        else if (product1.price < product2.price){
+          return product1;
+        }
+        else{
+          return;
+        }
+      }
+      console.log(comparePrice(product1,product2));
+
+      function isSameProduct(product1,product2){
+        const jsonProduct1 = JSON.stringify(product1);
+        const jsonProduct2 = JSON.stringify(product2);
+        if (jsonProduct1 === jsonProduct2){
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
+      console.log(isSameProduct(product1,product2));
+      
+    </script>
+  </body>
+
+</html>
